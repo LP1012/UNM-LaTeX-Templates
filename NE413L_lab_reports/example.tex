@@ -1,0 +1,138 @@
+\documentclass{413L}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\Large AGN-\#: EXAMPLE}\vspace{0.5cm}
+\author{Liam Pohlmann$^{\dagger}$}
+
+\institute{
+    $^{\dagger}$Undergraduate, Department of Nuclear Engineering, University of New Mexico, Albuquerque, NM
+}
+
+%% Optional disclaimer: remove this command to hide
+%\disclaimer{Notice: this manuscript is a work of fiction. Any resemblance to
+%actual articles, living or dead, is purely coincidental.}
+
+%%%% packages and definitions (optional)
+\usepackage{graphicx}   % allows inclusion of graphics
+\usepackage{booktabs}   % nice rules (thick lines) for tables
+\usepackage{microtype}  % improves typography for PDF
+\usepackage{physics}    % holds useful math operators
+\usepackage{setspace}
+\usepackage{isotope}
+\usepackage[version=4]{mhchem} % \ce{CO2 + C -> 2 CO}
+\usepackage{units}
+\usepackage[noabbrev,capitalize]{cleveref}  % greatly simplify citations
+\usepackage[labelfont=bf]{caption}          % bold the captions
+\usepackage[symbol]{footmisc}               % use symbols for footnotes when desired
+\usepackage{subcaption}
+\usepackage{textcomp}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{gensymb}
+
+\onehalfspace
+
+\begin{document}
+    \singlespace
+
+%    \tableofcontents
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{abstract}
+    The abstract should briefly summarize the entire report, ideally in \textbf{150–250 words}. Include:
+    \begin{enumerate}
+        \item The purpose or objective of the experiment
+        \item The main methods or procedures used
+        \item The most significant results
+        \item A concise conclusion or implication of the findings
+    \end{enumerate}
+    Avoid citations, figures, or equations. Keep it self-contained and understandable to someone who hasn’t read the rest of the paper.
+\end{abstract}
+
+\section{Introduction}
+The Introduction sets the stage for the reader. Include:
+\begin{enumerate}
+    \item Background on the topic and its relevance
+    \item A brief review of any necessary literature or foundational concepts
+    \item The motivation for the experiment
+    \item A clear statement of the objective or hypothesis
+    \item A sentence or two outlining the structure of the report
+\end{enumerate}
+
+\section{Theory}
+This section explains the scientific principles behind the experiment. Use \textbf{equations and diagrams as needed}.
+
+\begin{enumerate}
+    \item Define all key variables and assumptions
+    \item Discuss relevant laws, formulas, or models
+    \item Include derivations or simplifications as necessary
+    \item Use the following example to format equations with the \texttt{split} environment:
+\end{enumerate}
+
+\begin{equation}
+\label{eq:fourier-flux}
+\begin{split}
+    q'' &= -k \frac{dT}{dx} \\
+    Q &= \int_A q'' \, dA = -k A \frac{\Delta T}{L}
+\end{split}
+\end{equation}
+
+\begin{enumerate}
+    \item[5.] Explain each step and define all symbols (\(q''\): heat flux, \(k\): thermal conductivity, etc.)
+\end{enumerate}
+
+Note that to reference an equation, use \cref{eq:fourier-flux} so that the formatting looks good.
+For citations, use \verb|\cite{key}|, example: ~\cite{EXAMPLE}, and be sure to run \texttt{BibTeX} after running \texttt{PDFLaTeX} once.
+
+\section{Methods and Procedures}
+Describe how the experiment was conducted in \textbf{step-by-step detail}.
+
+\subsection{Experiment}
+\begin{enumerate}
+    \item Outline materials used (equipment, sensors, etc.)
+    \item Describe the experimental setup, ideally with a diagram
+    \item Present step-by-step procedures
+    \item Mention any calibration or safety steps
+\end{enumerate}
+
+\subsection{Data Processing}
+\begin{enumerate}
+    \item Explain how raw data was converted into usable results
+    \item Mention any software or analysis tools used
+    \item Describe error analysis techniques or uncertainty estimation
+    \item Show sample calculations, if applicable
+\end{enumerate}
+
+\section{Results and Analyses}
+Present the data and analyze what it means. Length: 
+
+\begin{enumerate}
+    \item Include tables, graphs, and figures as needed
+    \item Describe trends, patterns, or anomalies
+    \item Compare with theoretical expectations or literature
+    \item Include quantitative error analysis
+    \item Interpret what the results suggest in terms of the experiment’s goals
+\end{enumerate}
+
+\section{Conclusion}
+Summarize findings and reflect on implications. 
+
+\begin{enumerate}
+    \item Recap the key results and what they mean
+    \item State whether the hypothesis was supported
+    \item Discuss sources of error and limitations
+    \item Suggest improvements or future work
+    \item Avoid repeating data; focus on broader takeaways
+\end{enumerate}
+
+
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \bibliographystyle{agn}
+    \bibliography{references}
+
+\end{document}
+

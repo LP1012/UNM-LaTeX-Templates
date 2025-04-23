@@ -1,0 +1,150 @@
+% Preamble
+\documentclass{juniorlabs}
+
+\title{A Very Official and Pretentious Title that Sums Up Your Paper}
+% Adjust vspace in juniorlabs.cls for more space in multiline titles
+\subtitle{Prepared for Submission for \{insert class\}}
+\author[1]{Author 1}
+\author[2]{Author 2}
+\affil[1]{University 1, Address 1, City, Country}
+\affil[2]{University 2, Address 2, City, Country}
+
+\email{example@unm.edu} % Include the email for the main point of contact for the report.
+\date{\today}
+
+% Document
+\begin{document}
+    \ReportHeading
+
+% Abstract (if needed)
+    \begin{abstract}
+        A required 200–-250 word abstract starts on this line.
+        Please insert here your abstract taking into account any comments from the reviewers.
+        The abstract must be consistent with the contents of this paper.
+
+        HINT: Write this section LAST!
+    \end{abstract}
+
+    \begin{keywords}
+        A couple of keywords (3-5).
+    \end{keywords}
+
+% Table of Contents (if needed)
+%\tableofcontents
+
+% List of Figures (if needed)
+%\listoffigures
+
+% List of Tables (if needed)
+%\listoftables
+
+% Start your content here
+
+    \section*{Overview of Template -- DELETE THIS FOR YOUR REPORT}
+    Welcome to the amazing world of \LaTeX!
+    I hope you find this outline useful and easy to use for you lab reports.
+    A couple of notes to the user:
+    \begin{itemize}
+        \item This outline is meant to be just that: an outline. A report will not write itself, and \LaTeX will be a struggle at first to those who have not used it before. Please plan your time accordingly.
+        \item The bibliography is automatically imported to this document. All you need to do is make sure you are calling the correct document name. I would recommend using a citation generator like \url{https://www.mybib.com/} or Zotero to create your BibTeX entries.
+        \item Your bibliography will \emph{NOT} automatically populate--you must reference each entry in your paper at some point with \verb|\cite{citation name}|.
+    \end{itemize}
+
+    Example: \\
+    \textit{As clear to even the most casual observer, these findings are without fault}~\cite{EXAMPLE}.
+
+    Additional features such as footnotes\footnote{Which can be created like this.} and appendices~\ref{sec:-first-appendix} can be seen throughout this file.
+
+    Equations should be added as such:
+    \begin{equation}
+        \frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial\phi}{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2\phi}{\partial\theta^2} + \frac{\partial^2\phi}{\partial z^2} - \frac{\nu\sigma_f}{v}\phi = \frac{1}{v}\frac{\partial\phi}{\partial t}
+    \end{equation}
+    Use \verb|$$| for small bits of information in-text, such as $a=3$.
+    Use \verb|\nicefrac| to do inline equations: $x = \nicefrac{5}{7}$
+
+    Code will likely also need to be included in your report, and is traditionally included in an appendix.
+    See Appendix~\ref{sec:minted-code} for an example of how to include code.
+    Note that the syntax highlighting can be used on more than just Python, so be sure to hightlight with the correct language.
+    See \url{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted} for more information.
+
+    Please remember the most important thing about \LaTeX and college in general: \emph{Google is your friend.}
+    This template gives a general outline for what \emph{I} think is very important to a report, but this is \emph{your} document -- please feel free to adjust the sections to whatever you feel is best for you.
+
+
+    \section{Introduction} \label{introduction}
+    Things to consider:
+    \begin{itemize}
+        \item What is the topic?
+        \item Start broad, then narrow down.
+        \item How is this work relevant?
+        \item What was goal of the experiment?
+    \end{itemize}
+
+
+    \section{Theory} \label{theory}
+    \begin{itemize}
+        \item All general equations.
+        \item How would you analyze your data?
+        \item Could I read this paper with only rudimentary and understand the experiment?
+        \item What are the other, outside factors that may affect the results?
+        \item How do you process your data?
+        \item How do you quantify the error?
+        \item How do you quantify the efficacy?
+    \end{itemize}
+
+    \subsection{Subsection of Theory}
+
+    \subsubsection{Subsubsection of Theory}
+
+
+    \section{Methodology} \label{methodology}
+    \subsection{Overview of Experimental Procedure}
+
+    \subsection{Data Processing}
+    In this section, you should go into detail of how the formulae introduced in Section~\ref{theory}.
+    Basically, you should walk through what you will be putting into Excel.
+    All explicit calculations should be included in the Appendix.
+
+
+    \section{Results}
+    \begin{table}[ht]
+        \centering
+        \caption{Random Data Table}
+        \begin{tabular}{ccc}
+            \toprule
+            \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\
+            \midrule
+            Row 1, Cell 1     & Row 1, Cell 2     & Row 1, Cell 3     \\
+            Row 2, Cell 1     & Row 2, Cell 2     & Row 2, Cell 3     \\
+            Row 3, Cell 1     & Row 3, Cell 2     & Row 3, Cell 3     \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+
+    \section{Conclusion}
+    Wrap up the paper.
+    Additional questions:
+    \begin{itemize}
+        \item How do the results relate to the real world?
+        \item What are the next steps?
+        \item How can the experiment be improved?
+    \end{itemize}
+
+
+    \appendix
+
+
+    \section{First Appendix} \label{sec:-first-appendix}
+
+
+    \section{Code} \label{sec:minted-code}
+    \inputminted[linenos, bgcolor=LightGray, fontsize=\footnotesize]{python}{EXAMPLE_Code.py}
+
+
+% Bibliography (if using BibTeX)
+    \bibliography{references}
+    \bibliographystyle{ieeetr}
+
+
+\end{document}
