@@ -23,7 +23,7 @@ epub:
 	ebook-convert $(manuscript).html $(manuscript).epub
 
 clean:
-	rm -f $(manuscript).pdf *.dvi *.toc *.aux *.out *.log *.bbl *.blg *.log *.spl *~ *.spl *.zip *.acn *.glo *.ist *.epub *.fdb_latxmk *.lof *.fls *.lot
+	rm -f *.dvi *.toc *.aux *.out *.log *.bbl *.blg *.log *.spl *~ *.spl *.zip *.acn *.glo *.ist *.epub *.fdb_latxmk *.lof *.fls *.lot
 	rm -rf _minted*
 
 realclean: clean
