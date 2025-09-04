@@ -27,6 +27,7 @@
 *.maf
 *.mtc
 *.mtc1
+_minted*
 
 # Editor-specific files (e.g., TeXstudio, VS Code)
 *.bak
