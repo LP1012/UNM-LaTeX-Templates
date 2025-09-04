@@ -1,15 +1,6 @@
-\documentclass{math_hw}
-\usepackage{cleveref}
-\usepackage{amsthm}
-\usepackage{bm}
-%\usepackage{subfigure}
-\usepackage{subcaption}
-\renewcommand\qedsymbol{\blacksquare}
-
+\documentclass{hw_report}
 
 \onehalfspacing
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
 
 \title{\textbf{Homework 1}\\ \vspace{1em}
 MATH 578: Intro to Numerical PDEs}
@@ -86,6 +77,8 @@ MATH 578: Intro to Numerical PDEs}
         \tag{C'}
         0=v_i^{n-1}-\lambda v_{i+1}^n +\lambda v_{i-1}^n-v^{n+1}_i
     \end{equation}
+
+    Information in this report was primarily taken from lecture notes~\cite{Motamed}.
 
 
     \section{Show that all three schemes are consistent with the advection equation.}
@@ -278,7 +271,9 @@ MATH 578: Intro to Numerical PDEs}
 
     \section{Implementation}
     \input{implementation}
-    
+
+    \bibliography{bibliography}
+    \bibliographystyle{ieeetr}
     \appendix
     \section{Code}
     \inputminted{python}{578_HW1.py}

@@ -21,21 +21,23 @@
 \RequirePackage{xcolor}
 \definecolor{LightGray}{gray}{0.95}
 \RequirePackage{apptools}
-\RequirePackage{minted}
+\RequirePackage{minted} % comment out if not including code
 \RequirePackage{authblk}
 \RequirePackage{units}
-\RequirePackage[inkscapeformat=png]{svg}
 \RequirePackage[labelfont=bf]{caption}
 \RequirePackage[noabbrev,capitalize]{cleveref}
 \RequirePackage{amsthm}
 \RequirePackage{bm}
 \RequirePackage{subcaption}
 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
 \renewcommand\qedsymbol{\blacksquare}
 
 \geometry{margin=1in}
 
-\titleformat{\section}{\normalfont\Large\itshape}{\textbf{Part~\thesection: }}{1em}{}
+\titleformat{\section}{\normalfont\Large\itshape}{\textbf{Section~\thesection: }}{1em}{}
 \AtAppendix{\titleformat{\section}{\normalfont\Large\itshape}{\textbf{Appendix~\thesection: }}{1em}{}}
 
 \hypersetup{
