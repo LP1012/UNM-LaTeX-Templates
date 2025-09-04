@@ -21,6 +21,10 @@ Then, run `BibTeX` on the `.aux` file, which will generate the necessary `.bbl` 
 Recompile your document twice using `pdflatex` to ensure the bibliography is loaded correctly.
 This process will need to be repeated if the bibliography file is updated and new citations are added to the document.
 If citations change the order in which they appear, this process will also need to be repeated.
+
+For a more streamlined process, `Makefiles` are in the process of being added to templates.
+The use of these assumes the user has installed `TeXLive` and its associated packages.
+Simply running `make` in a terminal will generate a `pdf`, while `make clean` will clean up the junk files created during compilation.
 ### Bibliography
 A provided `references.bib` file is found in the repository, and the template is current set up to import this. 
 Please feel free to add references as needed, following the steps above.
